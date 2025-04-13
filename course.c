@@ -35,3 +35,14 @@ void printCourse (Course *course) {
         printStudent(&course->studentsInCourse[i]);
     }
 }
+
+void checkStudentPresentInCourse (Course *course, int id) {
+
+    for(int i = 0; i < course->totalStudentsInCourse; i++) {
+        if(course->studentsInCourse->id == id) {
+            printf("YES STUDENT %s  WITH ID %d IS PRESENT IN THIS COURSE\n",course->studentsInCourse->name,id);
+        } else {
+            printf("NO STUDENT WITH ID %d IS NOT PRESENT IN THIS COURSE\n",id);
+        }
+    }
+}

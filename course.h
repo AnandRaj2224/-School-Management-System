@@ -15,6 +15,8 @@ typedef struct course {
 
 Course *courseCreation ();
 
-void printCourse (Course *course);
+void printCourse (Course *course, int id);
+
+void checkStudentPresentInCourse (Course *course);
 
 #endif
