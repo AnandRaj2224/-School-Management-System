@@ -1,22 +1,16 @@
-#include "student.h"
-#include "student.c"
-#include "course.h"
-//#include "course.c"
-#include "school.h"
-//#include "school.c"
-#include <stdlib.h>
+# include "school.c"
 
 int main () {
 
-    int i,j,totalStudents;
+    School *school = schoolCreation();
 
-    printf("enter the total number of students\n");
-    scanf("%d",&totalStudents);
+    printSchool (school);
+    checkStudentPresentInSchool (school, 3062);
+    printStudentCourses (school,3062);
 
-    Student *students = (int*)malloc(sizeof(Student)*totalStudents);
+    printCourse (&school->courses[0]);
+    checkStudentPresentInCourse (&school->courses[0],3062); 
 
-    for(i = 0; i < totalStudents; i++) {
-        printf("enter the student details for student %d:\n",i+1);
-        students[i] = createStudent();
-    }
+    free(school);
+    return 0;
 }
