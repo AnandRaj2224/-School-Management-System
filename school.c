@@ -1,16 +1,19 @@
-#ifndef SCHOOL_C
-#define SCHOOL_C
-
 #include "school.h"
 
-void schoolCreation(School *s) {
+School *schoolCreation() {
+
+    School *newSchool = malloc(sizeof(School));
 
     printf("enter the School Name :\t");
-    fgets((*s).schoolName,sizeof((*s).schoolName),stdin);
-    printf("enter the total number of Courses\t");
-    scanf("%d",&(*s).totalCourses);
+    fgets(newSchool->schoolName,sizeof(newSchool->schoolName),stdin);
+    printf("enter the total Number of courses in the school :\t");
+    scanf("%d",&newSchool->totalCourses);
 
-    (*s).courses = (Course*)malloc(sizeof(Course)*((*s).totalCourses));
+    newSchool->courses =  (Student*)malloc(sizeof(Student)*(newSchool->totalCourses));
 
+    for(int i = 0; i < newSchool->totalCourses; i++) {
+        
+        newSchool->courses[i] =  *(courseCreation());
+    }
+    return newSchool;
 }
-#endif
