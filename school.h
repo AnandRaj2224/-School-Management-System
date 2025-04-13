@@ -1,11 +1,14 @@
 #ifndef SCHOOL_H
 #define SCHOOL_H
 
-#include "Course.H"
+#include "Course.c"
 
 typedef struct school {
     char schoolName[30];
+    int totalCourses;
     Course *courses;
 } School;
+
+School *schoolCreation();
 
 #endif
