@@ -17,5 +17,5 @@ void printStudent (Student *student) {
 
     printf("the student details is as follows :\n");
     printf("NAME : \t",student->name);
-    printf("ID : \t",&student->id);
+    printf("ID : \t",student->id);
 }
