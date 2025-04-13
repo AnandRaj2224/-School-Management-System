@@ -32,6 +32,6 @@ void printCourse (Course *course) {
 
     printf("the students in the course : \n");
     for(int i = 0; i < course->totalStudentsInCourse; i++) {
-        printf("STUDENT NAME : %s AND ID : %d\n",course->studentsInCourse[i].name,course->studentsInCourse[i].id);
+        printStudent(&course->studentsInCourse[i]);
     }
 }
