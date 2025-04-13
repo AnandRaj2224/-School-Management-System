@@ -29,3 +29,17 @@ void printSchool (School *school) {
         printCourse(&school->courses[i]);
     }
 }
+
+void checkStudentPresentInSchool (School *school, int id) {
+    int i,j;
+
+    for(i = 0; i < school->totalCourses; i++) {
+        for(j = 0; j <school->courses[i].totalStudentsInCourse; j++) {
+            if(school->courses[i].studentsInCourse[j].id == id) {
+            printf("YES STUDENT %s  WITH ID %d IS PRESENT IN THIS SCHOOL\n",school->courses[i].studentsInCourse[j].name,id);
+            } else {
+                printf("NO STUDENT WITH ID %d IS NOT PRESENT IN THIS SCHOOL\n",id);
+            }
+        }
+    }
+}

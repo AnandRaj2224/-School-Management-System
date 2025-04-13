@@ -13,4 +13,6 @@ School *schoolCreation();
 
 void printSchool (School *school);
 
+void checkStudentPresentInSchool (School *school, int id);
+
 #endif
