@@ -16,4 +16,6 @@ typedef struct student {
 
 Student *studentCreation ();
 
+void printStudent (Student *student);
+
 #endif
