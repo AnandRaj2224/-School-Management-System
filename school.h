@@ -11,4 +11,6 @@ typedef struct school {
 
 School *schoolCreation();
 
+void printSchool (School *school);
+
 #endif

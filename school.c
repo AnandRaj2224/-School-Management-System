@@ -17,3 +17,15 @@ School *schoolCreation() {
     }
     return newSchool;
 }
+
+void printSchool (School *school) {
+
+    printf("the School details are as follows :\n");
+    printf("SCHOOL NAME : %s \t",school->schoolName);
+    printf("TOTAL COURSES : %d \t",school->totalCourses);
+
+    printf("the courses in the school : \n");
+    for(int i = 0; i < school->totalCourses; i++) {
+        printCourse(&school->courses[i]);
+    }
+}
