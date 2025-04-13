@@ -21,3 +21,17 @@ Course *courseCreation () {
     }
     return newCourse;
 }
+
+void printCourse (Course *course) {
+
+    printf("the course details are as follows :\n");
+    printf("COURSE NAME : %s \t",course->courseName);
+    printf("PASSING GRADES : %d \t",course->passingGrades);
+    printf("AVERAGE GRADES :%.2lf \t",course->averageGrades);
+    printf("TOTAL STUDENTS : %d \t",course->totalStudentsInCourse);
+
+    printf("the students in the course : \n");
+    for(int i = 0; i < course->totalStudentsInCourse; i++) {
+        printf("STUDENT NAME : %s AND ID : %d\n",course->studentsInCourse[i].name,course->studentsInCourse[i].id);
+    }
+}
