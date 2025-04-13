@@ -1,18 +1,13 @@
-#ifndef STUDENT_C
-#define STUDENT_C
-
-#include <stdio.h>
-#include <string.h>
 #include "student.h"
-Student createStudent () {
 
-    Student s;
-    printf("NAME :\t");
-    fgets(s.name, sizeof(s.name),stdin);
-    prinf("ID :\t");
-    scanf("%d",&s.id);
+Student *studentCreation () {
 
-    return s;
+    Student *student = malloc(sizeof(Student));
+    printf("enter the student Details\n");
+    printf("enter the student Name :\t");
+    fgets(student->name,sizeof(student->name),stdin);
+    printf("enter the ID :\t");
+    scanf("%d",&student->id);
+
+    return student;
 }
-
-#endif
