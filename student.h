@@ -4,16 +4,16 @@
 #ifndef STUDENT_H 
 #define STUDENT_H
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 typedef struct student {
 
     char name[25];
     int id;
-
 } Student;
 
-/*Create a Student: Takes user input for student details, allocates a new student struct 
-in memory, and populates the struct with the provided details.*/
-
-Student createStudent();
+Student *studentCreation ();
 
 #endif
