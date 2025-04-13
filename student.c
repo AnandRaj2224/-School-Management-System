@@ -8,7 +8,7 @@ Student *studentCreation () {
     fgets(student->name,sizeof(student->name),stdin);
     printf("enter the ID :\t");
     scanf("%d",&student->id);
-
+    getchar();
     return student;
 }
 
@@ -16,6 +16,6 @@ Student *studentCreation () {
 void printStudent (Student *student) {
 
     printf("the student details is as follows :\n");
-    printf("NAME : \t",student->name);
-    printf("ID : \t",student->id);
+    printf("NAME :%s\n",student->name);
+    printf("ID : %d \n",student->id);
 }

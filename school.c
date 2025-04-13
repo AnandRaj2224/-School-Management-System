@@ -8,8 +8,9 @@ School *schoolCreation() {
     fgets(newSchool->schoolName,sizeof(newSchool->schoolName),stdin);
     printf("enter the total Number of courses in the school :\t");
     scanf("%d",&newSchool->totalCourses);
+    getchar();
 
-    newSchool->courses =  (Student*)malloc(sizeof(Student)*(newSchool->totalCourses));
+    newSchool->courses =  (Course*)malloc(sizeof(Course)*(newSchool->totalCourses));
 
     for(int i = 0; i < newSchool->totalCourses; i++) {
         
@@ -21,8 +22,8 @@ School *schoolCreation() {
 void printSchool (School *school) {
 
     printf("the School details are as follows :\n");
-    printf("SCHOOL NAME : %s \t",school->schoolName);
-    printf("TOTAL COURSES : %d \t",school->totalCourses);
+    printf("SCHOOL NAME : %s \n",school->schoolName);
+    printf("TOTAL COURSES : %d \n",school->totalCourses);
 
     printf("the courses in the school : \n");
     for(int i = 0; i < school->totalCourses; i++) {
@@ -48,11 +49,12 @@ void printStudentCourses (School *school, int id) {
 
     int i,j;
 
-    printf("THE COURSES STUDENT WITH ID %d IS PRESENT IN ARE :\n");
+    printf("THE COURSES STUDENT WITH ID %d IS PRESENT IN ARE :\n",school->totalCourses);
     for(i = 0; i < school->totalCourses; i++) {
         for(j = 0; j <school->courses[i].totalStudentsInCourse; j++) {
             if(school->courses[i].studentsInCourse[j].id == id) {
                 printf("%s\n",school->courses->courseName);
+                break;
             } else {
                 printf("NO STUDENT WITH ID %d IS NOT PRESENT IN THIS SCHOOL\n",id);
             }
